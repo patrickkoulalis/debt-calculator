@@ -1,0 +1,87 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Debt Acceleration Calculator</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="box form-box">
+			
+			<!-- Calculator One Form -->
+			<form id="calc" name="calc" action="" method="POST">
+				
+				<label for="largest_mortgage">Largest Mortgage or Loan Balance</label>
+				<input id="largest_mortgage" maxlength="40" name="loan" size="20" type="text" placeholder="Largest Mortgage or Loan Balance" value="">
+
+				<label for="interest_rate">Interest Rate</label>
+				<input id="interest_rate" maxlength="80" name="interest_rate" size="20" type="text" placeholder="Interest Rate" value="">
+
+				<label for="months_remaining">Months Remaining</label>
+				<input id="months_remaining" maxlength="40" name="term" size="20" type="text" placeholder="Months Remaining" value="">				
+
+				<label for="income">Monthly Net Income</label>
+				<input id="monthly_net_income" maxlength="40" name="monthly_net_income" size="20" type="text" placeholder="Monthly Net Income" value="">
+
+				<label for="expenes">Monthly Fixed Expenses</label>
+				<input id="monthly_fixed_expenses" maxlength="80" name="monthly_fixed_expenses" size="20" type="text" placeholder="Monthly Fixed Expenses" value="">
+
+				<label for="expenses">Monthly Livings Expenses</label>
+				<input id="monthly_living_expenses" maxlength="40" name="monthly_living_expenses" size="20" type="text" placeholder="Monthly Livings Expenses" value="">
+
+<!-- 				<label for="additional_payment">Additional Payment</label>
+				<input id="additional_payment" maxlength="80" name="additional_payment" size="20" type="text" placeholder="Additional Payment" value=""> -->
+				
+				<button class="btn calculate">Calculate</button>
+
+			</form>
+		</div>
+		
+		<div class="flex-container results-wrap">
+		
+			<div class="box basic-box">
+				<h1>Basic Box</h1>
+				<div id="basic-payment">
+					<h2><span class="green">$0</span> In Monthly Payments</h2>
+				</div>
+				<div id="basic-tip">
+					<h2><span class="green">$0</span> Total Intrest Paid</h2>
+				</div>
+				<div id="basic-savings">
+					<h2><span class="red">$0</span> In Savings</h2>
+
+				</div>
+				<div id="basic-extra">
+					<h2><span class="green">$0</span> Extra Cash</h2>
+
+				</div>				
+			</div>
+
+			<div class="box savings-box">
+				<h1>Savings Box</h1>
+				<div id="savings-result">
+					<div id="adv-payment">
+						<h2><span class="green">$0</span> Monthly Payments</h2>
+					</div>
+					<div id="adv-tip">
+						<h2><span class="green">$0</span> Total Intrest Paid</h2>
+
+					</div>
+					<div id="adv-savings">
+						<h2><span class="green">$0</span> In Savings</h2>
+					</div>
+					<div id="adv-extra">
+						<h2><span class="red">$0</span> Extra Cash</h2>
+					</div>											
+				</div>
+			</div>			
+
+		</div>
+
+
+	</div>
+</body>
+<script src="main.js"></script>
+<script src="jquery.accrue.js"></script>
+</html>
